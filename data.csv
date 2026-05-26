@@ -1,0 +1,35 @@
+# Simple AI Data Analysis Program using Pandas
+
+import pandas as pd
+
+# Load CSV file
+data = pd.read_csv("data.csv")
+
+# Show first rows
+print("First 5 Rows:")
+print(data.head())
+
+# Dataset information
+print("\nDataset Info:")
+print(data.info())
+
+# Statistical summary
+print("\nStatistics:")
+print(data.describe())
+
+# Check missing values
+print("\nMissing Values:")
+print(data.isnull().sum())
+
+# Simple AI-like analysis
+# Find average values
+print("\nAverage Values:")
+print(data.mean(numeric_only=True))
+
+# Find highest values
+print("\nMaximum Values:")
+print(data.max(numeric_only=True))
+
+# Find correlations
+print("\nCorrelation Matrix:")
+print(data.corr(numeric_only=True))
